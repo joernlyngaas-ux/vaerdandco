@@ -320,7 +320,8 @@ h3 {
   margin: 0 0 var(--space-24);
 }
 
-.photo img {
+.photo img,
+.photo video {
   display: block;
   width: 100%;
   max-width: 100%;
