@@ -21,18 +21,53 @@ a:hover{color:#000000}
 a:focus-visible{outline:2px solid #000000;outline-offset:2px}
 .vf{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 32px}
 @container (max-width: 640px){.vf{justify-content:center;text-align:center}}
+/* mobile only */
+@media (max-width: 640px){.vr{min-height:100vh !important;min-height:100svh !important}.vr>.vf{flex:0 0 auto !important}}
+.vmn{display:none}
+.vmn>summary{list-style:none;cursor:pointer}
+.vmn>summary::-webkit-details-marker{display:none}
+.vmn>summary::marker{content:""}
+.vmn>summary:focus-visible{outline:2px solid #000000;outline-offset:2px}
+@container (max-width: 640px){
+.vhd{position:relative;padding-top:28px !important}
+.vdn{display:none !important}
+.vmn{display:block;width:100%}
+.vmn>summary{position:absolute;top:20px;right:8px;width:44px;height:44px;display:block;color:#000000}
+.vmn>summary svg{display:block;margin:11px auto}
+.vmn>summary .vmx{margin:13px auto}
+.vmn[open] .vmi,.vmn:not([open]) .vmx{display:none}
+.vmp{display:flex;flex-direction:column;align-items:center;padding:14px 0 2px}
+.vmp a{display:block;padding:8px 0;font-family:'Cormorant Garamond',Garamond,'Times New Roman',serif;font-size:26px;line-height:32px;font-weight:400;color:#000000;text-decoration:none}
+.vmp a[aria-current]{font-style:italic}
+.vm{padding-top:40px !important;padding-bottom:56px !important;flex:1 0 auto;justify-content:center}
+.vmg{gap:56px !important}
+.vir{margin-top:-32px !important}
+.vpt{max-width:300px !important}
+.vrow{flex-direction:column !important;align-items:stretch !important;gap:16px !important}
+.vrow>.vl{align-self:center !important;flex-direction:column !important;gap:3px !important;width:auto !important;height:auto !important;min-height:0 !important;max-height:none !important;padding:0 !important}
+.vrow>.vl>span{flex-direction:row !important;justify-content:center !important;width:auto !important;gap:0.34em !important}
+.vrow>.vsp{display:none !important}
+}
+
+@container (max-width: 640px){
+.hx{flex-direction:column !important;flex-wrap:nowrap !important}
+.hx>.hi{flex:1 1 0 !important;min-height:150px !important}
+.hx>.hc{flex:0 0 auto !important;padding:24px 24px 28px !important;gap:22px !important;justify-content:flex-start !important}
+.hc nav a{padding:8px 0 !important;font-size:26px !important;line-height:30px !important}
+.hc p br{display:none}
+}
 </style>
 </head>
 <body>
-<div style="width: 100%; min-height: 100vh; box-sizing: border-box; container-type: inline-size; background: #ffffff; color: #000000; font-family: Spectral, Georgia, 'Times New Roman', serif; font-size: 17px; line-height: 29px; text-align: center; display: flex; flex-direction: column;">
+<div class="vr" style="width: 100%; min-height: 100vh; box-sizing: border-box; container-type: inline-size; background: #ffffff; color: #000000; font-family: Spectral, Georgia, 'Times New Roman', serif; font-size: 17px; line-height: 29px; text-align: center; display: flex; flex-direction: column;">
 
-  <div style="display: flex; flex-direction: row-reverse; flex-wrap: wrap; align-items: stretch; flex: 1 1 auto;">
+  <div class="hx" style="display: flex; flex-direction: row-reverse; flex-wrap: wrap; align-items: stretch; flex: 1 1 auto;">
 
-  <div style="flex: 1 1 480px; min-width: 0; min-height: clamp(320px, 60cqi, 100vh); display: flex; flex-direction: column;">
+  <div class="hi" style="flex: 1 1 480px; min-width: 0; min-height: clamp(320px, 60cqi, 100vh); display: flex; flex-direction: column;">
     <img src="media/e9564a983a2f0a479220e040f4976d4e.jpg" alt="The entrance of an Oslo townhouse at dusk, a small brass plate beside the door, the street passing in a long exposure" style="display: block; flex: 1 1 0; width: 100%; min-height: 0; object-fit: cover; object-position: center 58%;">
   </div>
 
-  <div style="flex: 1 1 480px; min-width: 0; box-sizing: border-box; padding: 40px clamp(24px, 6cqi, 88px) 40px clamp(24px, 6cqi, 88px); display: flex; flex-direction: column; justify-content: space-between; gap: 56px;">
+  <div class="hc" style="flex: 1 1 480px; min-width: 0; box-sizing: border-box; padding: 40px clamp(24px, 6cqi, 88px) 40px clamp(24px, 6cqi, 88px); display: flex; flex-direction: column; justify-content: space-between; gap: 56px;">
     <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 8px;">
       <a href="index.html" style="font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-size: 28px; line-height: 1; font-weight: 500; letter-spacing: 0.32em; text-transform: uppercase; color: #000000; text-decoration: none;">VAERD</a>
     </div>

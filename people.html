@@ -25,42 +25,78 @@ a:focus-visible{outline:2px solid #000000;outline-offset:2px}
 @container (max-width: 640px){.vf{justify-content:center;text-align:center}}
 .pm{display:grid;grid-template-columns:1fr 1fr 2fr 1fr 1fr;grid-template-rows:repeat(2,calc((100cqi - 64px) / 6));gap:16px}
 .pm>img{display:block;width:100%;height:100%;min-width:0;min-height:0;object-fit:cover;object-position:var(--op,50% 50%);grid-column:var(--c);grid-row:var(--r)}
-@container (max-width: 640px){.pm{grid-template-columns:1fr 1fr;grid-template-rows:repeat(6,calc((100cqi - 10px) / 2));gap:10px}.pm>img{grid-column:var(--mc);grid-row:var(--mr);object-position:var(--mop,var(--op,50% 50%))}}
+@container (max-width: 640px){.pm{grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(3,calc((100cqi - 18px) / 4));gap:6px}.pm>img{grid-column:var(--mc);grid-row:var(--mr);object-position:var(--mop,var(--op,50% 50%))}}
+/* mobile only */
+@media (max-width: 640px){.vr{min-height:100vh !important;min-height:100svh !important}.vr>.vf{flex:0 0 auto !important}}
+.vmn{display:none}
+.vmn>summary{list-style:none;cursor:pointer}
+.vmn>summary::-webkit-details-marker{display:none}
+.vmn>summary::marker{content:""}
+.vmn>summary:focus-visible{outline:2px solid #000000;outline-offset:2px}
+@container (max-width: 640px){
+.vhd{position:relative;padding-top:28px !important}
+.vdn{display:none !important}
+.vmn{display:block;width:100%}
+.vmn>summary{position:absolute;top:20px;right:8px;width:44px;height:44px;display:block;color:#000000}
+.vmn>summary svg{display:block;margin:11px auto}
+.vmn>summary .vmx{margin:13px auto}
+.vmn[open] .vmi,.vmn:not([open]) .vmx{display:none}
+.vmp{display:flex;flex-direction:column;align-items:center;padding:14px 0 2px}
+.vmp a{display:block;padding:8px 0;font-family:'Cormorant Garamond',Garamond,'Times New Roman',serif;font-size:26px;line-height:32px;font-weight:400;color:#000000;text-decoration:none}
+.vmp a[aria-current]{font-style:italic}
+.vm{padding-top:40px !important;padding-bottom:56px !important;flex:1 0 auto;justify-content:center}
+.vmg{gap:56px !important}
+.vir{margin-top:-32px !important}
+.vpt{max-width:300px !important}
+.vrow{flex-direction:column !important;align-items:stretch !important;gap:16px !important}
+.vrow>.vl{align-self:center !important;flex-direction:column !important;gap:3px !important;width:auto !important;height:auto !important;min-height:0 !important;max-height:none !important;padding:0 !important}
+.vrow>.vl>span{flex-direction:row !important;justify-content:center !important;width:auto !important;gap:0.34em !important}
+.vrow>.vsp{display:none !important}
+}
 </style>
 </head>
 <body>
-<div style="width: 100%; box-sizing: border-box; container-type: inline-size; background: #ffffff; color: #000000; font-family: Spectral, Georgia, 'Times New Roman', serif; font-size: 17px; line-height: 29px; text-align: center; display: flex; flex-direction: column;">
+<div class="vr" style="width: 100%; box-sizing: border-box; container-type: inline-size; background: #ffffff; color: #000000; font-family: Spectral, Georgia, 'Times New Roman', serif; font-size: 17px; line-height: 29px; text-align: center; display: flex; flex-direction: column;">
 
-  <header style="display: flex; flex-direction: column; justify-content: center; align-items: center; flex-wrap: wrap; gap: 8px 32px; padding: 40px clamp(24px, 6cqi, 88px) 0 clamp(24px, 6cqi, 88px); box-sizing: border-box;">
+  <header class="vhd" style="display: flex; flex-direction: column; justify-content: center; align-items: center; flex-wrap: wrap; gap: 8px 32px; padding: 40px clamp(24px, 6cqi, 88px) 0 clamp(24px, 6cqi, 88px); box-sizing: border-box;">
     <a href="index.html" style="font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-size: 28px; line-height: 1; font-weight: 500; letter-spacing: 0.32em; text-transform: uppercase; color: #000000; text-decoration: none;">VAERD</a>
-    <nav aria-label="Pages" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0 28px; font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; line-height: 14px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;">
+    <nav aria-label="Pages" class="vdn" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0 28px; font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; line-height: 14px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;">
       <a href="about.html" style="display: inline-block; padding: 15px 0; color: #000000; text-decoration: none;">About</a>
       <a href="people.html" aria-current="page" style="display: inline-block; padding: 15px 0; color: #000000; text-decoration: none; border-bottom: 1px solid #000000;">People</a>
       <a href="research.html" style="display: inline-block; padding: 15px 0; color: #000000; text-decoration: none;">Research</a>
       <a href="contact.html" style="display: inline-block; padding: 15px 0; color: #000000; text-decoration: none;">Contact</a>
     </nav>
+    <details class="vmn">
+      <summary aria-label="Menu"><svg class="vmi" viewBox="0 0 20 20" width="22" height="22" aria-hidden="true" focusable="false"><path d="M2 5.5 H18 M2 10 H18 M2 14.5 H18" stroke="currentColor" stroke-width="1.4" fill="none"></path></svg><svg class="vmx" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><path d="M3 3 L17 17 M17 3 L3 17" stroke="currentColor" stroke-width="1.4" fill="none"></path></svg></summary>
+      <nav aria-label="Menu" class="vmp">
+        <a href="about.html">About</a>
+        <a href="people.html" aria-current="page">People</a>
+        <a href="research.html">Research</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </details>
   </header>
 
-  <main style="display: flex; flex-direction: column; gap: clamp(64px, 7cqi, 104px); padding: clamp(64px, 8cqi, 120px) clamp(24px, 6cqi, 88px) clamp(80px, 10cqi, 140px) clamp(24px, 6cqi, 88px); box-sizing: border-box; max-width: 1248px; width: 100%; margin-left: auto; margin-right: auto;">
+  <main class="vm vmg" style="display: flex; flex-direction: column; gap: clamp(64px, 7cqi, 104px); padding: clamp(64px, 8cqi, 120px) clamp(24px, 6cqi, 88px) clamp(80px, 10cqi, 140px) clamp(24px, 6cqi, 88px); box-sizing: border-box; max-width: 1248px; width: 100%; margin-left: auto; margin-right: auto;">
 
     <section style="display: flex; flex-direction: column; gap: clamp(40px, 5cqi, 64px);">
       <h1 style="margin: 0; font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-size: clamp(40px, 4.8cqi, 68px); line-height: 1.04; font-weight: 400; max-width: 12em; width: 100%; margin-left: auto; margin-right: auto;">People</h1>
       <div style="width: 100%; container-type: inline-size;">
         <div class="pm">
-          <img src="media/7a3b55b985caf15973dd84a22c85c63e.jpg" alt="Ole-Henrik Stensrud in military winter gear, kneeling over a map in the snow and pointing the way" style="--c: 2; --r: 1; --mc: 2; --mr: 3;">
-          <img src="media/1b10195935de4cf0b3e38e8987dc8482.jpg" alt="Portrait of Jørn Lager Lyngås in a dark fleece against a grey background" style="--c: 4; --r: 2; --mc: 1; --mr: 6;">
-          <img src="media/742069fd74fc297d344b345fd8cfdb77.jpg" alt="Two people on a ship's deck seen through a doorway from a dark cabin, one looking through binoculars at snow-covered mountains and ice" style="--c: 5; --r: 1 / span 2; --mc: 2; --mr: 5 / span 2; --op: 63% 50%;">
-          <img src="media/9a0d8a26d58f40d14ea7be2e112150ad.jpg" alt="Five people on skis in a line, each pulling a sled across a snow plain, with low fog and mountains behind" style="--c: 4; --r: 1; --mc: 1; --mr: 5; --op: 50% 55%;">
-          <img src="media/42c7e3219e71963ff81fd6edfd986028.jpg" alt="Black-and-white photograph of a blurred figure walking down a derelict corridor toward an arched door full of light" style="--c: 1; --r: 1 / span 2; --mc: 1; --mr: 3 / span 2; --op: 45% 50%;">
-          <img src="media/f156f3f29992b5681cc0cd1159f04a5f.jpg" alt="People crossing the Shibuya scramble in Tokyo, seen from high above, with long shadows across the asphalt and white crossing stripes" style="--c: 3; --r: 1 / span 2; --mc: 1 / span 2; --mr: 1 / span 2;">
-          <img src="media/3451a78d179c8f57ce2a15dd2401faa9.jpg" alt="Bird's-eye view of Henningsvær in Lofoten: a football pitch on a small rocky island surrounded by deep blue sea" style="--c: 2; --r: 2; --mc: 2; --mr: 4; --op: 45% 50%;">
+          <img src="media/7a3b55b985caf15973dd84a22c85c63e.jpg" alt="Ole-Henrik Stensrud in military winter gear, kneeling over a map in the snow and pointing the way" style="--c: 2; --r: 1; --mc: 1; --mr: 3;">
+          <img src="media/1b10195935de4cf0b3e38e8987dc8482.jpg" alt="Portrait of Jørn Lager Lyngås in a dark fleece against a grey background" style="--c: 4; --r: 2; --mc: 4; --mr: 3;">
+          <img src="media/742069fd74fc297d344b345fd8cfdb77.jpg" alt="Two people on a ship's deck seen through a doorway from a dark cabin, one looking through binoculars at snow-covered mountains and ice" style="--c: 5; --r: 1 / span 2; --mc: 4; --mr: 1 / span 2; --op: 63% 50%;">
+          <img src="media/9a0d8a26d58f40d14ea7be2e112150ad.jpg" alt="Five people on skis in a line, each pulling a sled across a snow plain, with low fog and mountains behind" style="--c: 4; --r: 1; --mc: 3; --mr: 3; --op: 50% 55%;">
+          <img src="media/42c7e3219e71963ff81fd6edfd986028.jpg" alt="Black-and-white photograph of a blurred figure walking down a derelict corridor toward an arched door full of light" style="--c: 1; --r: 1 / span 2; --mc: 1; --mr: 1 / span 2; --op: 45% 50%;">
+          <img src="media/f156f3f29992b5681cc0cd1159f04a5f.jpg" alt="People crossing the Shibuya scramble in Tokyo, seen from high above, with long shadows across the asphalt and white crossing stripes" style="--c: 3; --r: 1 / span 2; --mc: 2 / span 2; --mr: 1 / span 2;">
+          <img src="media/3451a78d179c8f57ce2a15dd2401faa9.jpg" alt="Bird's-eye view of Henningsvær in Lofoten: a football pitch on a small rocky island surrounded by deep blue sea" style="--c: 2; --r: 2; --mc: 2; --mr: 3; --op: 45% 50%;">
         </div>
       </div>
       <p style="margin: 0; max-width: 30em; width: 100%; margin-left: auto; margin-right: auto; font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-size: clamp(22px, 2cqi, 27px); line-height: 1.4; font-weight: 400;">We are a small firm, and we choose the people we work with carefully. Everyone involved in our work is expected to think independently and bring original thinking to every question. That matters more now that AI has made answers cheap. We come from different fields and share a real curiosity about people, business and politics.</p>
     </section>
 
-    <div style="display: flex; justify-content: center; align-items: flex-start; gap: clamp(20px, 3cqi, 40px); width: 100%;">
-        <span role="img" aria-label="Reiser. Journeys." style="align-self: stretch; flex: none; display: flex; gap: 6px; font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 10px; line-height: 12px; font-weight: 500; padding: 6px 0; box-sizing: border-box; min-height: 116px; max-height: 268px;"><span lang="nb" aria-hidden="true" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; width: 12px;"><span>R</span><span>E</span><span>I</span><span>S</span><span>E</span><span>R</span></span><span aria-hidden="true" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; width: 12px;"><span>J</span><span>O</span><span>U</span><span>R</span><span>N</span><span>E</span><span>Y</span><span>S</span></span></span>
+    <div class="vrow" style="display: flex; justify-content: center; align-items: flex-start; gap: clamp(20px, 3cqi, 40px); width: 100%;">
+        <span class="vl" role="img" aria-label="Reiser. Journeys." style="align-self: stretch; flex: none; display: flex; gap: 6px; font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 10px; line-height: 12px; font-weight: 500; padding: 6px 0; box-sizing: border-box; min-height: 116px; max-height: 268px;"><span lang="nb" aria-hidden="true" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; width: 12px;"><span>R</span><span>E</span><span>I</span><span>S</span><span>E</span><span>R</span></span><span aria-hidden="true" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; width: 12px;"><span>J</span><span>O</span><span>U</span><span>R</span><span>N</span><span>E</span><span>Y</span><span>S</span></span></span>
         <section style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; max-width: 1000px; min-width: 0; flex: 1 1 auto;">
           <a href="leadership.html" class="pl" style="display: inline-flex; flex-direction: column; align-items: center; padding: 6px 0; color: #000000; text-decoration: none;">
             <span style="font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-size: clamp(30px, 2.8cqi, 38px); line-height: 1.15; font-weight: 400; font-style: italic;">Leadership</span>
@@ -72,7 +108,7 @@ a:focus-visible{outline:2px solid #000000;outline-offset:2px}
             <span style="font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-size: clamp(30px, 2.8cqi, 38px); line-height: 1.15; font-weight: 400; font-style: italic;">Outside partners</span>
           </a>
         </section>
-        <span aria-hidden="true" style="width: 30px; flex: none;"></span>
+        <span class="vsp" aria-hidden="true" style="width: 30px; flex: none;"></span>
     </div>
 
 

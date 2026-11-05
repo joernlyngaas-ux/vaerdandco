@@ -21,24 +21,60 @@ a:hover{color:#000000}
 a:focus-visible{outline:2px solid #000000;outline-offset:2px}
 .vf{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 32px}
 @container (max-width: 640px){.vf{justify-content:center;text-align:center}}
+/* mobile only */
+@media (max-width: 640px){.vr{min-height:100vh !important;min-height:100svh !important}.vr>.vf{flex:0 0 auto !important}}
+.vmn{display:none}
+.vmn>summary{list-style:none;cursor:pointer}
+.vmn>summary::-webkit-details-marker{display:none}
+.vmn>summary::marker{content:""}
+.vmn>summary:focus-visible{outline:2px solid #000000;outline-offset:2px}
+@container (max-width: 640px){
+.vhd{position:relative;padding-top:28px !important}
+.vdn{display:none !important}
+.vmn{display:block;width:100%}
+.vmn>summary{position:absolute;top:20px;right:8px;width:44px;height:44px;display:block;color:#000000}
+.vmn>summary svg{display:block;margin:11px auto}
+.vmn>summary .vmx{margin:13px auto}
+.vmn[open] .vmi,.vmn:not([open]) .vmx{display:none}
+.vmp{display:flex;flex-direction:column;align-items:center;padding:14px 0 2px}
+.vmp a{display:block;padding:8px 0;font-family:'Cormorant Garamond',Garamond,'Times New Roman',serif;font-size:26px;line-height:32px;font-weight:400;color:#000000;text-decoration:none}
+.vmp a[aria-current]{font-style:italic}
+.vm{padding-top:40px !important;padding-bottom:56px !important;flex:1 0 auto;justify-content:center}
+.vmg{gap:56px !important}
+.vir{margin-top:-32px !important}
+.vpt{max-width:300px !important}
+.vrow{flex-direction:column !important;align-items:stretch !important;gap:16px !important}
+.vrow>.vl{align-self:center !important;flex-direction:column !important;gap:3px !important;width:auto !important;height:auto !important;min-height:0 !important;max-height:none !important;padding:0 !important}
+.vrow>.vl>span{flex-direction:row !important;justify-content:center !important;width:auto !important;gap:0.34em !important}
+.vrow>.vsp{display:none !important}
+}
 </style>
 </head>
 <body>
-<div style="width: 100%; box-sizing: border-box; container-type: inline-size; background: #ffffff; color: #000000; font-family: Spectral, Georgia, 'Times New Roman', serif; font-size: 17px; line-height: 29px; text-align: center; display: flex; flex-direction: column;">
+<div class="vr" style="width: 100%; box-sizing: border-box; container-type: inline-size; background: #ffffff; color: #000000; font-family: Spectral, Georgia, 'Times New Roman', serif; font-size: 17px; line-height: 29px; text-align: center; display: flex; flex-direction: column;">
 
-  <header style="display: flex; flex-direction: column; justify-content: center; align-items: center; flex-wrap: wrap; gap: 8px 32px; padding: 40px clamp(24px, 6cqi, 88px) 0 clamp(24px, 6cqi, 88px); box-sizing: border-box;">
+  <header class="vhd" style="display: flex; flex-direction: column; justify-content: center; align-items: center; flex-wrap: wrap; gap: 8px 32px; padding: 40px clamp(24px, 6cqi, 88px) 0 clamp(24px, 6cqi, 88px); box-sizing: border-box;">
     <a href="index.html" style="font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-size: 28px; line-height: 1; font-weight: 500; letter-spacing: 0.32em; text-transform: uppercase; color: #000000; text-decoration: none;">VAERD</a>
-    <nav aria-label="Pages" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0 28px; font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; line-height: 14px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;">
+    <nav aria-label="Pages" class="vdn" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0 28px; font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; line-height: 14px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;">
       <a href="about.html" aria-current="page" style="display: inline-block; padding: 15px 0; color: #000000; text-decoration: none; border-bottom: 1px solid #000000;">About</a>
       <a href="people.html" style="display: inline-block; padding: 15px 0; color: #000000; text-decoration: none;">People</a>
       <a href="research.html" style="display: inline-block; padding: 15px 0; color: #000000; text-decoration: none;">Research</a>
       <a href="contact.html" style="display: inline-block; padding: 15px 0; color: #000000; text-decoration: none;">Contact</a>
     </nav>
+    <details class="vmn">
+      <summary aria-label="Menu"><svg class="vmi" viewBox="0 0 20 20" width="22" height="22" aria-hidden="true" focusable="false"><path d="M2 5.5 H18 M2 10 H18 M2 14.5 H18" stroke="currentColor" stroke-width="1.4" fill="none"></path></svg><svg class="vmx" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><path d="M3 3 L17 17 M17 3 L3 17" stroke="currentColor" stroke-width="1.4" fill="none"></path></svg></summary>
+      <nav aria-label="Menu" class="vmp">
+        <a href="about.html" aria-current="page">About</a>
+        <a href="people.html">People</a>
+        <a href="research.html">Research</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </details>
   </header>
 
   
 
-  <main style="display: flex; flex-direction: column; gap: clamp(72px, 8cqi, 120px); padding: clamp(64px, 8cqi, 120px) clamp(24px, 6cqi, 88px) clamp(80px, 10cqi, 140px) clamp(24px, 6cqi, 88px); box-sizing: border-box; max-width: 1248px; width: 100%; margin-left: auto; margin-right: auto;">
+  <main class="vm vmg" style="display: flex; flex-direction: column; gap: clamp(72px, 8cqi, 120px); padding: clamp(64px, 8cqi, 120px) clamp(24px, 6cqi, 88px) clamp(80px, 10cqi, 140px) clamp(24px, 6cqi, 88px); box-sizing: border-box; max-width: 1248px; width: 100%; margin-left: auto; margin-right: auto;">
 
     <section style="display: flex; flex-direction: column; align-items: center; gap: clamp(24px, 3cqi, 40px); padding-bottom: clamp(48px, 5cqi, 72px); border-bottom: 1px solid #000000;">
       <h1 style="margin: 0; font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-size: clamp(40px, 4.8cqi, 68px); line-height: 1.04; font-weight: 400; max-width: 12em; width: 100%; margin-left: auto; margin-right: auto; text-wrap: balance;">Insight and discretion</h1>
@@ -47,7 +83,7 @@ a:focus-visible{outline:2px solid #000000;outline-offset:2px}
       
     </section>
 
-    <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: clamp(8px, 1.2cqi, 16px); width: 100%; margin-top: calc(-1 * clamp(72px, 8cqi, 120px) + clamp(24px, 3cqi, 40px));">
+    <div class="vir" style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: clamp(8px, 1.2cqi, 16px); width: 100%; margin-top: calc(-1 * clamp(72px, 8cqi, 120px) + clamp(24px, 3cqi, 40px));">
       <img src="media/d8d810d91f93f25df780c3632b579f04.jpg" alt="Engraving of Vestbanegården in Christiania, 1870s" style="display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover;">
       <img src="media/5b905716453c1bcb7faba8c9a5c36a08.jpg" alt="IBM 7090 computers in a machine room at NASA during Project Mercury, early 1960s" style="display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover;">
       <img src="media/b878258193218b97713d5dc38349dbdd.jpg" alt="The Ekofisk field in the North Sea, 1983" style="display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover;">
@@ -57,12 +93,12 @@ a:focus-visible{outline:2px solid #000000;outline-offset:2px}
 
     <section style="display: flex; flex-direction: column; gap: 32px;">
       <h2 style="margin: 0; font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-size: clamp(44px, 5.2cqi, 76px); line-height: 1.04; font-weight: 400; text-align: center">200 years of impact</h2>
-      <div style="display: flex; justify-content: center; align-items: flex-start; gap: clamp(20px, 3cqi, 40px);">
-        <span role="img" aria-label="Følelser og deres Værd. Feelings and their worth." style="align-self: stretch; flex: none; max-height: 780px; display: flex; gap: 6px; font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 10px; line-height: 12px; font-weight: 500; padding: 6px 0;"><span lang="nb" aria-hidden="true" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; width: 12px;"><span>F</span><span>Ø</span><span>L</span><span>E</span><span>L</span><span>S</span><span>E</span><span>R</span><span>&nbsp;</span><span>O</span><span>G</span><span>&nbsp;</span><span>D</span><span>E</span><span>R</span><span>E</span><span>S</span><span>&nbsp;</span><span>V</span><span>Æ</span><span>R</span><span>D</span></span><span aria-hidden="true" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; width: 12px;"><span>F</span><span>E</span><span>E</span><span>L</span><span>I</span><span>N</span><span>G</span><span>S</span><span>&nbsp;</span><span>A</span><span>N</span><span>D</span><span>&nbsp;</span><span>T</span><span>H</span><span>E</span><span>I</span><span>R</span><span>&nbsp;</span><span>W</span><span>O</span><span>R</span><span>T</span><span>H</span></span></span>
+      <div class="vrow" style="display: flex; justify-content: center; align-items: flex-start; gap: clamp(20px, 3cqi, 40px);">
+        <span class="vl" role="img" aria-label="Følelser og deres Værd. Feelings and their worth." style="align-self: stretch; flex: none; max-height: 780px; display: flex; gap: 6px; font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 10px; line-height: 12px; font-weight: 500; padding: 6px 0;"><span lang="nb" aria-hidden="true" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; width: 12px;"><span>F</span><span>Ø</span><span>L</span><span>E</span><span>L</span><span>S</span><span>E</span><span>R</span><span>&nbsp;</span><span>O</span><span>G</span><span>&nbsp;</span><span>D</span><span>E</span><span>R</span><span>E</span><span>S</span><span>&nbsp;</span><span>V</span><span>Æ</span><span>R</span><span>D</span></span><span aria-hidden="true" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; width: 12px;"><span>F</span><span>E</span><span>E</span><span>L</span><span>I</span><span>N</span><span>G</span><span>S</span><span>&nbsp;</span><span>A</span><span>N</span><span>D</span><span>&nbsp;</span><span>T</span><span>H</span><span>E</span><span>I</span><span>R</span><span>&nbsp;</span><span>W</span><span>O</span><span>R</span><span>T</span><span>H</span></span></span>
         <div style="display: flex; flex-direction: column; gap: 24px; max-width: 26em; min-width: 0; flex: 1 1 auto;">
       <p style="margin: 0; max-width: 34em; text-align: center; width: 100%; margin-left: auto; margin-right: auto;">Our name is inspired by Hans Nielsen Hauge and his book <em lang="nb">Om religiøse Følelser og deres Værd</em>, published in 1817. Between 1797 and 1804, Hauge walked much of Norway. Interested in people, he made many friends. Those friendships became a network, and the network became an economy. On his advice, friends bought and created businesses that turned into enterprises. His work is viewed as Norway's first nationwide popular movement, built at a time when all popular organisation was banned. He saw the value in independent thinking and lasting relationships. This created enterprises still existing today. <em lang="nb">Værd/vaerd</em> means worth.</p>
         </div>
-        <span aria-hidden="true" style="width: 30px; flex: none;"></span>
+        <span class="vsp" aria-hidden="true" style="width: 30px; flex: none;"></span>
       </div>
     </section>
 
@@ -71,8 +107,8 @@ a:focus-visible{outline:2px solid #000000;outline-offset:2px}
     <section style="display: flex; flex-direction: column; gap: 32px;">
       <h2 style="margin: 0; font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-size: clamp(44px, 5.2cqi, 76px); line-height: 1.04; font-weight: 400; text-align: center; text-wrap: balance;">What we advise on</h2>
       <p style="margin: 0; max-width: 30em; width: 100%; margin-left: auto; margin-right: auto;">We find that capabilities and sectors blend, and we believe in merging areas of expertise, since they so often meet where commercial value or impact is created.</p>
-      <div style="display: flex; justify-content: center; align-items: flex-start; gap: clamp(20px, 3cqi, 40px); width: 100%; margin-top: 8px;">
-        <span role="img" aria-label="Virkefelt. Practice areas." style="align-self: stretch; flex: none; display: flex; gap: 6px; font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 10px; line-height: 12px; font-weight: 500; padding: 6px 0; box-sizing: border-box; min-height: 194px; max-height: 460px;"><span lang="nb" aria-hidden="true" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; width: 12px;"><span>V</span><span>I</span><span>R</span><span>K</span><span>E</span><span>F</span><span>E</span><span>L</span><span>T</span></span><span aria-hidden="true" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; width: 12px;"><span>P</span><span>R</span><span>A</span><span>C</span><span>T</span><span>I</span><span>C</span><span>E</span><span>&nbsp;</span><span>A</span><span>R</span><span>E</span><span>A</span><span>S</span></span></span>
+      <div class="vrow" style="display: flex; justify-content: center; align-items: flex-start; gap: clamp(20px, 3cqi, 40px); width: 100%; margin-top: 8px;">
+        <span class="vl" role="img" aria-label="Virkefelt. Practice areas." style="align-self: stretch; flex: none; display: flex; gap: 6px; font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 10px; line-height: 12px; font-weight: 500; padding: 6px 0; box-sizing: border-box; min-height: 194px; max-height: 460px;"><span lang="nb" aria-hidden="true" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; width: 12px;"><span>V</span><span>I</span><span>R</span><span>K</span><span>E</span><span>F</span><span>E</span><span>L</span><span>T</span></span><span aria-hidden="true" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; width: 12px;"><span>P</span><span>R</span><span>A</span><span>C</span><span>T</span><span>I</span><span>C</span><span>E</span><span>&nbsp;</span><span>A</span><span>R</span><span>E</span><span>A</span><span>S</span></span></span>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 40px clamp(32px, 4cqi, 64px); max-width: 760px; min-width: 0; flex: 1 1 auto;">
           <div style="display: flex; flex-direction: column; gap: 12px; min-width: 0;">
             <span style="font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; line-height: 14px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;">Capabilities</span>
@@ -99,7 +135,7 @@ a:focus-visible{outline:2px solid #000000;outline-offset:2px}
             </ul>
           </div>
         </div>
-        <span aria-hidden="true" style="width: 30px; flex: none;"></span>
+        <span class="vsp" aria-hidden="true" style="width: 30px; flex: none;"></span>
       </div>
     </section>
 
