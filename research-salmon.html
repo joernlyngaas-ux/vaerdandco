@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VAERD, research note: AI sea-lice control in Norwegian salmon farming</title>
+<meta name="description" content="Stingray has built over 3,000 machine-vision lasers that find lice on swimming salmon and shoot at them, and says it is on a quarter of Norwegian farm sites…">
+<link rel="canonical" href="https://vaerdandco.com/research-salmon.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VAERD &amp; Co.">
+<meta property="og:title" content="VAERD, research note: AI sea-lice control in Norwegian salmon farming">
+<meta property="og:description" content="Stingray has built over 3,000 machine-vision lasers that find lice on swimming salmon and shoot at them, and says it is on a quarter of Norwegian farm sites…">
+<meta property="og:url" content="https://vaerdandco.com/research-salmon.html">
+<meta property="og:image" content="https://vaerdandco.com/media/e9564a983a2f0a479220e040f4976d4e.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&amp;family=Spectral:ital,wght@0,300;0,400;1,400&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#ffffff;color:#000000}
+a{color:#000000}
+a:hover{color:#000000}
+a:focus-visible{outline:2px solid #000000;outline-offset:2px}
+.vf{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 32px}
+@container (max-width: 640px){.vf{justify-content:center;text-align:center}}
+.vh{display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:repeat(7,calc(100cqi / 12));width:100cqi;margin-left:calc(50% - 50cqi);background:#d6d6d6;overflow:hidden;text-align:left}
+.vh>img{grid-column:1/-1;grid-row:1/-1;width:100%;height:100%;object-fit:cover;object-position:50% 25%;display:block}
+.vt{grid-column:var(--c)/span var(--w,1);grid-row:var(--r)/span var(--h,1);box-sizing:border-box;min-width:0;min-height:0}
+@container (max-width: 720px){.vh{grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(9,calc(100cqi / 6))}.vh>img{object-position:62% 40%}.vt{grid-column:var(--mc)/span var(--mw,1);grid-row:var(--mr)/span var(--mh,1)}.vt.dm{display:none}}
+</style>
+</head>
+<body>
+<div style="width: 100%; box-sizing: border-box; container-type: inline-size; background: #ffffff; color: #000000; font-family: Spectral, Georgia, 'Times New Roman', serif; font-size: 17px; line-height: 29px; text-align: center; display: flex; flex-direction: column;">
+
+  <header style="display: flex; flex-direction: column; justify-content: center; align-items: center; flex-wrap: wrap; gap: 8px 32px; padding: 40px clamp(24px, 6cqi, 88px) 0 clamp(24px, 6cqi, 88px); box-sizing: border-box;">
+    <a href="index.html" style="font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-size: 28px; line-height: 1; font-weight: 500; letter-spacing: 0.32em; text-transform: uppercase; color: #000000; text-decoration: none;">VAERD</a>
+    <nav aria-label="Pages" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0 28px; font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; line-height: 14px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;">
+      <a href="about.html" style="display: inline-block; padding: 15px 0; color: #000000; text-decoration: none;">About</a>
+      <a href="people.html" style="display: inline-block; padding: 15px 0; color: #000000; text-decoration: none;">People</a>
+      <a href="research.html" aria-current="page" style="display: inline-block; padding: 15px 0; color: #000000; text-decoration: none; border-bottom: 1px solid #000000;">Research</a>
+      <a href="contact.html" style="display: inline-block; padding: 15px 0; color: #000000; text-decoration: none;">Contact</a>
+    </nav>
+  </header>
+
+  <main style="display: flex; flex-direction: column; gap: clamp(48px, 5cqi, 72px); padding: clamp(64px, 8cqi, 120px) clamp(24px, 6cqi, 88px) clamp(80px, 10cqi, 140px) clamp(24px, 6cqi, 88px); box-sizing: border-box; max-width: 1248px; width: 100%; margin-left: auto; margin-right: auto;">
+
+    <section class="vh" style="margin-top: calc(-1 * clamp(64px, 8cqi, 120px) + 24px);">
+      <img src="media/d8ab050895a10d32707127efd99607a4.jpg" alt="Close-up of an Atlantic salmon's head in black and white, mouth open, the eye in sharp focus">
+      <span class="vt" aria-hidden="true" style="--c: 4; --r: 1; --mc: 2; --mr: 1; background-color: var(--ink, #000000)"></span>
+      <span class="vt" aria-hidden="true" style="--c: 12; --r: 1; --mc: 6; --mr: 1; background-color: var(--ink, #000000)"></span>
+      <span class="vt" aria-hidden="true" style="--c: 1; --r: 2; --mc: 1; --mr: 2; background-color: var(--ink, #000000)"></span>
+      <span class="vt" aria-hidden="true" style="--c: 7; --r: 1; --mc: 4; --mr: 2; background-color: var(--paper, #ffffff)"></span>
+      <span class="vt" aria-hidden="true" style="--c: 11; --r: 3; --mc: 6; --mr: 2; background-color: var(--paper, #ffffff)"></span>
+      <span class="vt dm" aria-hidden="true" style="--c: 1; --r: 5; background-color: var(--ink, #000000)"></span>
+      <span class="vt" aria-hidden="true" style="--c: 9; --r: 5; --mc: 6; --mr: 6; background-color: var(--ink, #000000)"></span>
+      <span class="vt" aria-hidden="true" style="--c: 4; --r: 6; --mc: 1; --mr: 9; color: var(--paper, #ffffff); background-color: var(--ink, #000000)"></span>
+      <span class="vt dm" aria-hidden="true" style="--c: 5; --r: 7; background-color: var(--paper, #ffffff)"></span>
+      <span class="vt dm" aria-hidden="true" style="--c: 8; --r: 7; background-color: var(--paper, #ffffff)"></span>
+      <div class="vt" style="--c: 9; --r: 6; --w: 4; --h: 2; --mc: 1; --mr: 6; --mw: 5; --mh: 2; color: #000000; padding: clamp(14px, 1.8cqi, 28px); display: flex; align-items: center; background-color: #FF0000">
+        <h1 style="margin: 0; font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-size: clamp(24px, 2.8cqi, 42px); line-height: 1.04; font-weight: 500; text-wrap: balance;">AI sea-lice control in Norwegian salmon farming</h1>
+      </div>
+      <div class="vt" style="--c: 1; --r: 1; --w: 3; --h: 1; --mc: 2; --mr: 8; --mw: 5; --mh: 2; color: #000000; padding: clamp(10px, 1.2cqi, 18px) clamp(12px, 1.4cqi, 20px); display: flex; flex-direction: column; justify-content: center; gap: 2px; font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; line-height: 16px; font-weight: 500; letter-spacing: 0.02em; background-color: var(--paper, #ffffff)"><span>Research note 26 October 2026</span>
+        <span>Jørn Lager Lyngås</span>
+        <span style="display: flex; gap: 16px; margin-top: 4px"><a href="https://www.lesswrong.com/posts/gSy9TQKmnpbC4X9GJ/ai-sea-lice-control-in-norwegian-salmon-farming" style="color: rgb(0, 0, 0); text-decoration: none; border-bottom: 1px solid rgb(0, 0, 0)">LessWrong</a><a href="https://jornlagerlyngas.substack.com/p/ai-sea-lice-control-in-norwegian" style="color: rgb(0, 0, 0); text-decoration: none; border-bottom: 1px solid rgb(0, 0, 0)">Substack</a></span>
+      </div>
+    </section>
+
+    <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 40px 40px; max-width: 1100px; width: 100%; margin-left: auto; margin-right: auto;">
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+        <span style="font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-size: clamp(32px, 3cqi, 44px); line-height: 1; font-weight: 400; white-space: nowrap;">55 million</span>
+        <span style="font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; line-height: 17px; font-weight: 500; letter-spacing: 0.04em; max-width: 24ch;">salmon died at sea in Norway in 2025</span>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+        <span style="font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-size: clamp(32px, 3cqi, 44px); line-height: 1; font-weight: 400; white-space: nowrap;">400–450 million</span>
+        <span style="font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; line-height: 17px; font-weight: 500; letter-spacing: 0.04em; max-width: 24ch;">salmon and trout produced a year, over half the world's farmed Atlantic salmon</span>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+        <span style="font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-size: clamp(32px, 3cqi, 44px); line-height: 1; font-weight: 400; white-space: nowrap;">3,000+</span>
+        <span style="font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; line-height: 17px; font-weight: 500; letter-spacing: 0.04em; max-width: 24ch;">machine-vision lasers, on a quarter of Norwegian farm sites</span>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+        <span style="font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-size: clamp(32px, 3cqi, 44px); line-height: 1; font-weight: 400; white-space: nowrap;">4–5 million</span>
+        <span style="font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; line-height: 17px; font-weight: 500; letter-spacing: 0.04em; max-width: 24ch;">more deaths a year if AI frees the growth the traffic lights have held back</span>
+      </div>
+    </section>
+
+    <section style="display: flex; flex-direction: column; gap: 20px; max-width: 34em; width: 100%; margin-left: auto; margin-right: auto;">
+      <p style="margin: 0;">Stingray has built over 3,000 machine-vision lasers that find lice on swimming salmon and shoot at them, and <a href="https://www.salmonbusiness.com/stingray-nearly-doubles-lice-laser-output-as-norwegian-demand-accelerates/" style="color: rgb(0, 0, 0); text-decoration: none; border-bottom: 1px solid rgb(0, 0, 0)">says it is on a quarter of Norwegian farm sites already</a>. Around 30 companies also count lice with automated camera systems under a temporary exemption, though none of these counters is approved yet.</p>
+      <p style="margin: 0;">Norway produces over half the world's farmed Atlantic salmon, about 400–450 million salmon and trout a year. About 55 million salmon died at sea in 2025, and fish-health staff rank delousing injuries as the leading cause of death and poor welfare. Cleaner fish (19 million used, 12.7 million died), wild salmon and the lice themselves are affected too.</p>
+    </section>
+
+    <section style="display: flex; flex-direction: column; gap: 20px; max-width: 34em; width: 100%; margin-left: auto; margin-right: auto;">
+      <p style="margin: 0;">Net impact per fish is probably a gain: lasers can replace delousing methods that handle the fish, which are linked to higher mortality. In total, I think it is more likely harmful, because lice are what Norway uses to cap growth. Every second year, each production area gets a traffic-light colour based on how much farm lice harm wild salmon: green areas may grow up to 6%, red must shrink 6%. The rule ignores how the farmed fish are doing. AI can loosen that brake in two ways: lasers may lower lice, and automated counts are becoming the evidence that decides who may grow. Whether lasers actually reduce lice is unproven, and counter accuracy is disputed. But if AI freed up as much growth as the traffic lights have since 2018, roughly 7–10% of capacity, some 30–45 million more fish a year would go into pens, and at today's death rate 4–5 million more would die. Gentler delousing might save a similar number, but then tens of millions more fish would spend their whole lives in pens.</p>
+    </section>
+
+    <section style="display: flex; flex-direction: column; gap: 24px; max-width: 34em; width: 100%; margin-left: auto; margin-right: auto;">
+      <p style="margin: 0;">Norway's parliament has ordered a scheme that lets farms with low lice emissions use extra capacity, and the minister says it depends on automated counting. It is stuck because "low-emission" has no definition yet, which gives advocates a rare chance to decide what the machines must measure. The same AI cameras that count lice can already see wounds: MSD's Falcon, launched in Norway in 2025, reports both. Advocates should push for the definition to put a welfare test next to the lice counts: growth only for farms with mortality in the lowest quarter of their area, as two Norwegian veterinary associations have proposed, with the cameras' wound data reported too. Whatever definition comes first will be hard to change.</p>
+      <p style="margin: 0; padding: 24px 0; border-top: 1px solid #000000; border-bottom: 1px solid #000000; font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-style: italic; font-size: clamp(24px, 2.2cqi, 30px); line-height: 1.3; font-weight: 400;">Our prediction is that by the end of 2027, the first definition will let automated lice counts unlock growth with no farmed-fish mortality criterion.</p>
+    </section>
+
+    <section style="display: flex; flex-direction: column; gap: 16px; max-width: 34em; width: 100%; margin-left: auto; margin-right: auto;">
+      <span style="font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; line-height: 14px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;">Sources</span>
+      <p style="margin: 0; font-size: 15px; line-height: 25px;"><a href="https://www.salmonbusiness.com/stingray-nearly-doubles-lice-laser-output-as-norwegian-demand-accelerates/" style="color: #000000; text-decoration: none; border-bottom: 1px solid #000000;">Salmon Business on Stingray's laser output and Norwegian demand</a>.</p>
+      <p style="margin: 0; font-size: 15px; line-height: 25px;"><a href="https://www.vetinst.no/rapporter-og-publikasjoner/rapporter/2026/fiskehelserapporten-2025" style="color: #000000; text-decoration: none; border-bottom: 1px solid #000000;">Fiskehelserapporten 2025, Veterinærinstituttet</a>, mortality and causes.</p>
+      <p style="margin: 0; font-size: 15px; line-height: 25px;"><a href="https://www.tu.no/artikler/star-wars-i-laksemerdene/514788" style="color: #000000; text-decoration: none; border-bottom: 1px solid #000000;">Teknisk Ukeblad on machine vision and laser delousing</a>.</p>
+    </section>
+
+    <section style="display: flex; flex-direction: column; gap: 16px; border-top: 1px solid #000000; padding-top: 32px;">
+      <a href="research.html" style="align-self: center; display: inline-block; padding: 8px 0; font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-size: 26px; line-height: 32px; font-weight: 400; color: #000000; text-decoration: none; border-bottom: 1px solid #000000;">All research notes</a>
+    </section>
+
+  </main>
+
+  <footer class="vf" style="border-top: 1px solid #000000; padding: 16px clamp(24px, 6cqi, 88px); box-sizing: border-box; flex: 1 1 100%; width: 100%; background: #ffffff; font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; line-height: 16px; letter-spacing: 0.04em;">
+    <span>© 2026 VAERD &amp; Co. · Oslo, Norway</span>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px 24px;">
+      <a href="contact.html" style="display: inline-flex; align-items: center; justify-content: center; min-height: 34px; padding: 0 18px 0 calc(18px + 0.26em); box-sizing: border-box; background: #000000; color: #ffffff; font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-size: 13px; line-height: 1; font-weight: 500; letter-spacing: 0.26em; text-transform: uppercase; text-decoration: none;">Contact</a>
+      <div style="display: flex; align-items: center; gap: 4px;"><a href="https://www.linkedin.com/company/vaerdandco/" aria-label="VAERD &amp; Co. on LinkedIn" title="LinkedIn" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; color: #000000; text-decoration: none;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false" style="display: block;"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></a></div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
