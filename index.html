@@ -48,13 +48,24 @@ a:focus-visible{outline:2px solid #000000;outline-offset:2px}
 .vrow>.vl>span{flex-direction:row !important;justify-content:center !important;width:auto !important;gap:0.34em !important}
 .vrow>.vsp{display:none !important}
 }
+@container (max-width: 640px){
+.vf{padding:12px 16px 14px !important;gap:8px 14px !important}
+.vf>span{font-size:10px !important;letter-spacing:0.02em !important}
+.vf>div{gap:6px 12px !important}
+.vf>div>a{min-height:30px !important;font-size:12px !important;padding:0 14px 0 calc(14px + 0.26em) !important}
+.vf>div>div>a{width:32px !important;height:32px !important}
+}
 
 @container (max-width: 640px){
 .hx{flex-direction:column !important;flex-wrap:nowrap !important}
-.hx>.hi{flex:1 1 0 !important;min-height:150px !important}
-.hx>.hc{flex:0 0 auto !important;padding:24px 24px 28px !important;gap:22px !important;justify-content:flex-start !important}
+.hx>.hi{order:1;flex:1 1 0 !important;min-height:150px !important}
+.hx>.hc{display:contents !important}
+.hc>div:first-child{order:0;padding:28px 24px 22px}
+.hc>div:nth-child(2){order:2;padding:22px 24px 0}
+.hc>nav{order:3;padding:12px 24px 24px;box-sizing:border-box}
 .hc nav a{padding:8px 0 !important;font-size:26px !important;line-height:30px !important}
 .hc p br{display:none}
+}
 }
 </style>
 </head>
