@@ -52,18 +52,18 @@ a:focus-visible{outline:2px solid #000000;outline-offset:2px}
 .vf{padding:12px 16px 14px !important;gap:8px 14px !important}
 .vf>span{font-size:10px !important;letter-spacing:0.02em !important}
 .vf>div{gap:6px 12px !important}
-.vf>div>a{min-height:30px !important;font-size:12px !important;padding:0 14px 0 calc(14px + 0.26em) !important}
+.vf>div>a{min-height:30px !important;font-size:15px !important;padding:0 14px !important}
 .vf>div>div>a{width:32px !important;height:32px !important}
 }
-.vddp{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);z-index:30;flex-direction:column;align-items:center;padding:8px 28px 12px;background:#ffffff;box-shadow:0 18px 40px -18px rgba(0,0,0,0.35);white-space:nowrap}
+.vddp{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);z-index:30;gap:44px;padding:18px 30px 14px;background:#ffffff;box-shadow:0 18px 40px -18px rgba(0,0,0,0.35);white-space:nowrap;text-align:left}
 .vdd:hover>.vddp,.vdd:focus-within>.vddp{display:flex}
-.vddp>a{display:block;padding:9px 0;color:#000000;text-decoration:none}
-.vddp>a:hover{opacity:0.55}
-.vmps{display:none}
-@container (max-width: 640px){
-.vmps{display:flex;flex-direction:column;align-items:center;padding:0 0 10px}
-.vmp .vmps a{padding:7px 0;font-family:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;line-height:14px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase}
-}
+.vddg{display:flex;flex-direction:column;align-items:flex-start}
+.vddg>span{font-family:'Cormorant Garamond',Garamond,'Times New Roman',serif;font-size:17px;line-height:22px;font-weight:400;letter-spacing:0;text-transform:none;opacity:0.6;padding:0 0 4px}
+.vddg>a{display:block;padding:7px 0;color:#000000;text-decoration:none}
+.vddg>a:hover{opacity:0.55}
+.vpf a{display:inline-flex;align-items:center;gap:7px;padding:6px 0;color:#000000;text-decoration:none;opacity:0.5}
+.vpf a[aria-current],.vpf a:hover{opacity:1}
+.vpf svg{display:block}
 </style>
 </head>
 <body>
@@ -71,11 +71,15 @@ a:focus-visible{outline:2px solid #000000;outline-offset:2px}
 
   <header class="vhd" style="display: flex; flex-direction: column; justify-content: center; align-items: center; flex-wrap: wrap; gap: 8px 32px; padding: 40px clamp(24px, 6cqi, 88px) 0 clamp(24px, 6cqi, 88px); box-sizing: border-box;">
     <a href="./" style="font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-size: 28px; line-height: 1; font-weight: 500; letter-spacing: 0.32em; text-transform: uppercase; color: #000000; text-decoration: none;">VAERD</a>
-    <nav aria-label="Pages" class="vdn" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0 28px; font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; line-height: 14px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;">
+    <nav aria-label="Pages" class="vdn" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0 28px; font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; line-height: 14px; font-weight: 500; letter-spacing: 0.02em;">
       <a href="about" style="display: inline-block; padding: 15px 0; color: #000000; text-decoration: none;">About</a>
       <a href="people" style="display: inline-block; padding: 15px 0; color: #000000; text-decoration: none;">People</a>
       <span class="vdd" style="position: relative; display: inline-block;">
         <a href="considerations" style="display: inline-block; padding: 15px 0; color: #000000; text-decoration: none;">Considerations</a>
+        <span class="vddp">
+          <span class="vddg"><span>Themes</span><a href="considerations/ai">AI</a><a href="considerations/policy">Policy</a><a href="considerations/effective-altruism">Effective Altruism</a><a href="considerations/literary-agility">Literary agility</a></span>
+          <span class="vddg"><span>Platforms</span><a href="considerations/research-notes">Research notes</a><a href="considerations/substack">Substack</a><a href="considerations/lesswrong">LessWrong</a><a href="considerations/coverage">Coverage</a></span>
+        </span>
       </span>
       <a href="contact" aria-current="page" style="display: inline-block; padding: 15px 0; color: #000000; text-decoration: none; border-bottom: 1px solid #000000;">Contact</a>
     </nav>
@@ -97,7 +101,7 @@ a:focus-visible{outline:2px solid #000000;outline-offset:2px}
         <div style="display: flex; flex-direction: column; gap: clamp(48px, 5cqi, 72px); max-width: 800px; min-width: 0; flex: 1 1 auto;">
         <section style="display: flex; flex-direction: column; align-items: center; gap: clamp(48px, 6cqi, 72px);">
           <p style="margin: 0; max-width: 24em; width: 100%; margin-left: auto; margin-right: auto; font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-size: clamp(22px, 2cqi, 27px); line-height: 1.35; font-weight: 400;">Reach out and write to us, and one of our partners will reply.</p>
-          <a href="mailto:ohs@vaerdandco.com,joern@vaerdandco.com?subject=A%20first%20conversation" style="display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 40px; box-sizing: border-box; background: #C6A253; background-image: linear-gradient(135deg, #DCBC72 0%, #C6A253 45%, #A9853A 100%); color: #000000; font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-size: 18px; line-height: 1; font-weight: 600; letter-spacing: 0.26em; padding-left: calc(40px + 0.26em); text-transform: uppercase; text-decoration: none; text-shadow: 0 1px 0 rgba(255, 238, 196, 0.75), 0 -1px 0 rgba(90, 62, 12, 0.3);">Reach out</a>
+          <a href="mailto:ohs@vaerdandco.com,joern@vaerdandco.com?subject=A%20first%20conversation" style="display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 40px; box-sizing: border-box; background: #C6A253; background-image: linear-gradient(135deg, #DCBC72 0%, #C6A253 45%, #A9853A 100%); color: #000000; font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-size: 21px; line-height: 1; font-weight: 600; letter-spacing: 0.02em; text-decoration: none; text-shadow: 0 1px 0 rgba(255, 238, 196, 0.75), 0 -1px 0 rgba(90, 62, 12, 0.3);">Reach out</a>
 
 
         </section>
