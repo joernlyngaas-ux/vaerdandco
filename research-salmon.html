@@ -71,7 +71,7 @@ a:focus-visible{outline:2px solid #000000;outline-offset:2px}
 </style>
 </head>
 <body>
-<div class="vr" style="width: 100%; box-sizing: border-box; container-type: inline-size; background: #ffffff; color: #000000; font-family: Spectral, Georgia, 'Times New Roman', serif; font-size: 17px; line-height: 29px; text-align: center; display: flex; flex-direction: column;">
+<div class="vr" style="width: 100%; box-sizing: border-box; container-type: inline-size; background: #ffffff; color: #000000; font-family: Spectral, Georgia, 'Times New Roman', serif; font-size: clamp(17px, 1.4vw, 20px); line-height: 1.3; text-align: center; display: flex; flex-direction: column;">
 
   <header class="vhd" style="display: flex; flex-direction: column; justify-content: center; align-items: center; flex-wrap: wrap; gap: 8px 32px; padding: 40px clamp(24px, 6cqi, 88px) 0 clamp(24px, 6cqi, 88px); box-sizing: border-box;">
     <a href="./" style="font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-size: 28px; line-height: 1; font-weight: 500; letter-spacing: 0.32em; text-transform: uppercase; color: #000000; text-decoration: none;">VAERD</a>
@@ -82,7 +82,7 @@ a:focus-visible{outline:2px solid #000000;outline-offset:2px}
         <a href="considerations" style="display: inline-block; padding: 15px 0; color: #000000; text-decoration: none; border-bottom: 1px solid #000000;">Considerations</a>
         <span class="vddp">
           <span class="vddg"><span>Themes</span><a href="considerations/ai">AI</a><a href="considerations/policy">Policy</a><a href="considerations/effective-altruism">Effective Altruism</a><a href="considerations/literary-agility">Literary agility</a></span>
-          <span class="vddg"><span>Platforms</span><a href="considerations/research-notes">Research notes</a><a href="considerations/substack">Substack</a><a href="considerations/lesswrong">LessWrong</a><a href="considerations/coverage">Coverage</a></span>
+          <span class="vddg"><span>Platforms</span><a href="considerations/research-notes">Research notes</a><a href="considerations/substack">Substack</a><a href="considerations/lesswrong">LessWrong</a><a href="considerations/press">Press</a></span>
         </span>
       </span>
       <a href="contact" style="display: inline-block; padding: 15px 0; color: #000000; text-decoration: none;">Contact</a>
@@ -113,7 +113,7 @@ a:focus-visible{outline:2px solid #000000;outline-offset:2px}
       <span class="vt dm" aria-hidden="true" style="--c: 5; --r: 7; background-color: var(--paper, #ffffff)"></span>
       <span class="vt dm" aria-hidden="true" style="--c: 8; --r: 7; background-color: var(--ink, #000000)"></span>
       <div class="vt" style="--c: 9; --r: 6; --w: 4; --h: 2; --mc: 1; --mr: 4; --mw: 5; --mh: 1; color: #000000; padding: clamp(14px, 1.8cqi, 28px); display: flex; align-items: center; background-color: var(--paper, #ffffff)">
-        <h1 style="margin: 0; font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-size: clamp(24px, 2.8cqi, 42px); line-height: 1.04; font-weight: 500; text-wrap: balance;">AI sea-lice control in Norwegian salmon farming</h1>
+        <h1 style="margin: 0; font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-size: clamp(24px, 2.8cqi, 42px); line-height: 1.15; font-weight: 400; font-style: italic; text-wrap: balance;">AI sea-lice control in Norwegian salmon farming</h1>
       </div>
       <div class="vt" style="--c: 1; --r: 1; --w: 3; --h: 1; --mc: 2; --mr: 5; --mw: 5; --mh: 1; color: #000000; padding: clamp(10px, 1.2cqi, 18px) clamp(12px, 1.4cqi, 20px); display: flex; flex-direction: column; justify-content: center; gap: 2px; font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; line-height: 16px; font-weight: 500; letter-spacing: 0.02em; background-color: var(--paper, #ffffff)"><span>Research note 26 October 2026</span>
         <span>Jørn Lager Lyngås</span>
@@ -141,12 +141,12 @@ a:focus-visible{outline:2px solid #000000;outline-offset:2px}
       </div>
     </section>
 
-    <section style="display: flex; flex-direction: column; gap: 20px; max-width: 34em; width: 100%; margin-left: auto; margin-right: auto;">
+    <section style="display: flex; flex-direction: column; gap: 1.5em; max-width: 34em; width: 100%; margin-left: auto; margin-right: auto;">
       <p style="margin: 0;">Stingray has built over 3,000 machine-vision lasers that find lice on swimming salmon and shoot at them, and <a href="https://www.salmonbusiness.com/stingray-nearly-doubles-lice-laser-output-as-norwegian-demand-accelerates/" style="color: rgb(0, 0, 0); text-decoration: none; border-bottom: 1px solid rgb(0, 0, 0)">says it is on a quarter of Norwegian farm sites already</a>. Around 30 companies also count lice with automated camera systems under a temporary exemption, though none of these counters is approved yet.</p>
       <p style="margin: 0;">Norway produces over half the world's farmed Atlantic salmon, about 400–450 million salmon and trout a year. About 55 million salmon died at sea in 2025, and fish-health staff rank delousing injuries as the leading cause of death and poor welfare. Cleaner fish (19 million used, 12.7 million died), wild salmon and the lice themselves are affected too.</p>
     </section>
 
-    <section style="display: flex; flex-direction: column; gap: 20px; max-width: 34em; width: 100%; margin-left: auto; margin-right: auto;">
+    <section style="display: flex; flex-direction: column; gap: 1.5em; max-width: 34em; width: 100%; margin-left: auto; margin-right: auto;">
       <p style="margin: 0;">Net impact per fish is probably a gain: lasers can replace delousing methods that handle the fish, which are linked to higher mortality. In total, I think it is more likely harmful, because lice are what Norway uses to cap growth. Every second year, each production area gets a traffic-light colour based on how much farm lice harm wild salmon: green areas may grow up to 6%, red must shrink 6%. The rule ignores how the farmed fish are doing. AI can loosen that brake in two ways: lasers may lower lice, and automated counts are becoming the evidence that decides who may grow. Whether lasers actually reduce lice is unproven, and counter accuracy is disputed. But if AI freed up as much growth as the traffic lights have since 2018, roughly 7–10% of capacity, some 30–45 million more fish a year would go into pens, and at today's death rate 4–5 million more would die. Gentler delousing might save a similar number, but then tens of millions more fish would spend their whole lives in pens.</p>
     </section>
 
